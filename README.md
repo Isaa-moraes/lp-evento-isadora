@@ -1,16 +1,11 @@
-# React + Vite
+# Corrida Noturna OC — Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page responsiva e acessível desenvolvida em React + Vite + Tailwind CSS v4 para a atividade da disciplina PEND (Programação Front-End).
 
-Currently, two official plugins are available:
+## 📝 Ticket de Saída
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 1. Qual é a diferença entre um componente que recebe props e um que usa useState? Dê um exemplo da sua página para cada um.
+**Resposta:** Um componente que recebe *props* é puramente visual e depende de dados externos enviados pelo componente pai, como o `CartaoAtracao.jsx`, que apenas exibe as informações de cada percurso. Já um componente que usa *useState* possui estado interno que pode mudar com base nas ações do usuário, como o `Inscricao.jsx`, que monitora o texto digitado nos campos do formulário e controla se a mensagem de sucesso deve ser exibida.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Se amanhã o evento ganhar uma quinta atração, quais arquivos você precisa mudar?
+**Resposta:** Seria necessário alterar **apenas o arquivo `src/data/evento.js`**, adicionando o objeto do novo percurso dentro do array `percursosLista`. Devido ao uso do método `.map()`, a interface da landing page se atualizaria sozinha e renderizaria o novo cartão de forma automática.
