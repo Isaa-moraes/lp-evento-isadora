@@ -16,7 +16,7 @@ function Hero() {
         <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 text-sm sm:text-base text-gray-200 border-y border-gray-700 py-4 max-w-xl mx-auto">
           <p>📅 <span className="font-bold">17 de abril de 2027</span> (sábado)</p>
           <p>🏁 Largada às <span className="font-bold">19h30</span></p>
-          <p>📍 <span className="font-bold">Praça Central</span> — Osvaldo Cruz/SP</p>
+          <p>📍 <span className="font-bold">Praça da Matriz</span> — Osvaldo Cruz/SP</p>
         </div>
         
         {/* Botão de Ação */}
