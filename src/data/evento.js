@@ -4,7 +4,7 @@ export const infoEvento = {
   slogan: 'Corra sob as luzes da cidade.',
   data: '17 de abril de 2027 (sábado)',
   largada: '19h30',
-  local: 'Praça Central — Osvaldo Cruz/SP'
+  local: 'Praça da Matriz — Osvaldo Cruz/SP'
 };
 
 // Três números de destaque para a seção Sobre
@@ -24,7 +24,7 @@ export const programacaoHorarios = [
   { horario: '21h', atividade: 'Premiação e show ao vivo' }
 ];
 
-// Lista de percursos (que entram no lugar de Atrações)
+// Lista de percursos
 export const percursosLista = [
   {
     nome: '10 km',
