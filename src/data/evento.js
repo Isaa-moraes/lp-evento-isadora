@@ -11,7 +11,7 @@ export const infoEvento = {
 export const destaquesSobre = [
   { id: 1, quantidade: '3', descricao: 'percursos disponíveis' },
   { id: 2, quantidade: '1.500', descricao: 'participantes' },
-  { id: 3, quantity: '6', descricao: 'pontos de hidratação' }
+  { id: 3, quantidade: '6', descricao: 'pontos de hidratação' }
 ];
 
 // Lista de horários e atividades para a seção Programação

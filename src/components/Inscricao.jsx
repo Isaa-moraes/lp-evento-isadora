@@ -16,9 +16,10 @@ function Inscricao() {
 
   if (enviado) {
     return (
-      <section id="inscricao" className="py-20 px-4 bg-gray-50 text-escura transition-all">
+      /* ♿ ACESSIBILIDADE: role="status" avisa imediatamente o leitor de tela que a inscrição foi concluída com sucesso */
+      <section id="inscricao" role="status" aria-live="polite" className="py-20 px-4 bg-gray-50 text-escura transition-all">
         <div className="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-md border-t-4 border-destaque text-center">
-          <span className="text-5xl block mb-4">🎉</span>
+          <span className="text-5xl block mb-4" aria-hidden="true">🎉</span>
           <h2 className="text-2xl sm:text-3xl font-black text-primaria uppercase tracking-tight">
             Inscrição Confirmada!
           </h2>
@@ -33,8 +34,9 @@ function Inscricao() {
             Enviamos os detalhes do kit e o regulamento completo para <span className="font-medium text-escura">{email}</span>.
           </p>
           <button 
+            type="button"
             onClick={() => { setEnviado(false); setNome(''); setEmail(''); }}
-            className="mt-8 text-sm font-bold text-primaria hover:underline min-h-[44px]"
+            className="mt-8 text-sm font-bold text-primaria hover:underline min-h-[44px] px-4 rounded focus-visible:outline focus-visible:outline-3 focus-visible:outline-primaria focus-visible:outline-offset-2"
           >
             Fazer outra inscrição
           </button>
@@ -58,36 +60,42 @@ function Inscricao() {
         {/* Formulário */}
         <form onSubmit={lidarComEnvio} className="space-y-6">
 
-          <label className="block text-sm font-bold text-gray-700 uppercase tracking-wide">
-            Nome Completo
+          {/* ♿ ACESSIBILIDADE: Adicionado htmlFor e id para vincular os inputs perfeitamente à label */}
+          <div className="block text-sm font-bold text-gray-700 uppercase tracking-wide">
+            <label htmlFor="campo-nome">Nome Completo</label>
             <input
+              id="campo-nome"
               type="text"
               required
+              autoComplete="name" /* Permite preenchimento rápido para restrições motoras */
               placeholder="Digite seu nome completo"
               value={nome}
               onChange={(e) => setNome(e.target.value)}
-              className="mt-2 w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-base focus:outline-none focus:border-primaria focus:bg-white transition-colors"
+              className="mt-2 w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-base focus:outline-none focus:border-primaria focus:bg-white focus-visible:outline focus-visible:outline-3 focus-visible:outline-primaria focus-visible:outline-offset-2 transition-colors"
             />
-          </label>
+          </div>
 
-          <label className="block text-sm font-bold text-gray-700 uppercase tracking-wide">
-            E-mail
+          <div className="block text-sm font-bold text-gray-700 uppercase tracking-wide">
+            <label htmlFor="campo-email">E-mail</label>
             <input
+              id="campo-email"
               type="email"
               required
+              autoComplete="email" /* Facilita a entrada de dados do usuário */
               placeholder="seu.email@exemplo.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-2 w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-base focus:outline-none focus:border-primaria focus:bg-white transition-colors"
+              className="mt-2 w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-base focus:outline-none focus:border-primaria focus:bg-white focus-visible:outline focus-visible:outline-3 focus-visible:outline-primaria focus-visible:outline-offset-2 transition-colors"
             />
-          </label>
+          </div>
 
-          <label className="block text-sm font-bold text-gray-700 uppercase tracking-wide">
-            Escolha o seu Percurso
+          <div className="block text-sm font-bold text-gray-700 uppercase tracking-wide">
+            <label htmlFor="campo-ingresso">Escolha o seu Percurso</label>
             <select
+              id="campo-ingresso"
               value={ingresso}
               onChange={(e) => setIngresso(e.target.value)}
-              className="mt-2 w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-base focus:outline-none focus:border-primaria focus:bg-white transition-colors h-12"
+              className="mt-2 w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-base focus:outline-none focus:border-primaria focus:bg-white focus-visible:outline focus-visible:outline-3 focus-visible:outline-primaria focus-visible:outline-offset-2 transition-colors h-12"
             >
               {tiposIngresso.map((opcao) => (
                 <option key={opcao.valor} value={opcao.valor}>
@@ -95,12 +103,12 @@ function Inscricao() {
                 </option>
               ))}
             </select>
-          </label>
+          </div>
 
           <div className="pt-2">
             <button
               type="submit"
-              className="w-full bg-primaria text-white font-black py-4 rounded-xl text-base shadow hover:bg-escura transition-colors uppercase tracking-wider min-h-[44px]"
+              className="w-full bg-primaria text-white font-black py-4 rounded-xl text-base shadow hover:bg-escura focus-visible:outline focus-visible:outline-3 focus-visible:outline-escura focus-visible:outline-offset-2 transition-colors uppercase tracking-wider min-h-[44px]"
             >
               Confirmar Inscrição
             </button>
