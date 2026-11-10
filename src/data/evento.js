@@ -55,3 +55,26 @@ export const tiposIngresso = [
   { valor: 'caminhada', label: 'Caminhada — R$ 40' },
   { valor: 'kids', label: 'Kids — R$ 25' }
 ];
+
+export const perguntasFrequentes = [
+  {
+    id: 1,
+    pergunta: 'Onde será a retirada dos kits de corrida?',
+    resposta: 'A retirada dos kits acontecerá no local do evento (Praça da Matriz), no sábado (17 de abril), das 16h às 18h.'
+  },
+  {
+    id: 2,
+    pergunta: 'O que está incluso no kit de inscrição?',
+    resposta: 'O kit inclui o número de peito oficial do atleta, chip de cronometragem eletrônica, camiseta refletiva do evento e brindes dos patrocinadores.'
+  },
+  {
+    id: 3,
+    pergunta: 'Haverá guarda-volumes no local?',
+    resposta: 'Sim, disponibilizaremos um serviço gratuito de guarda-volumes para todos os participantes inscritos na área de concentração.'
+  },
+  {
+    id: 4,
+    pergunta: 'O evento possui estacionamento próprio?',
+    resposta: 'Não há estacionamento exclusivo, mas haverá vagas públicas regulamentadas e sinalizadas ao redor da Praça da Matriz e ruas adjacentes.'
+  }
+];
