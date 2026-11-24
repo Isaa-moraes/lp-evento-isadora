@@ -1,3 +1,5 @@
+import BotaoLembrete from './BotaoLembrete'
+
 function Hero() {
   return (
     <section id="inicio" className="bg-escura text-white py-20 px-4 text-center border-b-4 border-destaque">
@@ -14,19 +16,22 @@ function Hero() {
         
         {/* Informações de Data e Local */}
         <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 text-sm sm:text-base text-gray-200 border-y border-gray-700 py-4 max-w-xl mx-auto">
-          <p>📅 <span className="font-bold">17 de abril de 2027</span> (sábado)</p>
-          <p>🏁 Largada às <span className="font-bold">19h30</span></p>
-          <p>📍 <span className="font-bold">Praça da Matriz</span> — Osvaldo Cruz/SP</p>
+          <p><span aria-hidden="true">📅</span> <span className="font-bold">17 de abril de 2027</span> (sábado)</p>
+          <p><span aria-hidden="true">🏁</span> Largada às <span className="font-bold">19h30</span></p>
+          <p><span aria-hidden="true">📍</span> <span className="font-bold">Praça da Matriz</span> — Osvaldo Cruz/SP</p>
         </div>
         
-        {/* Botão de Ação */}
-        <div className="mt-10">
+        {/* Botões de Ação */}
+        <div className="mt-10 flex flex-col items-center">
           <a
             href="#inscricao"
             className="inline-block bg-destaque text-escura font-black px-8 py-4 rounded-full text-lg shadow-lg hover:scale-105 transition-transform uppercase tracking-wider min-h-[44px]"
           >
             Garantir Ingresso
           </a>
+
+          {/* Botão de notificação PWA */}
+          <BotaoLembrete />
         </div>
       </div>
     </section>
