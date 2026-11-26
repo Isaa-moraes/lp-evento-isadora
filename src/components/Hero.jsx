@@ -11,7 +11,7 @@ function Hero() {
         
         {/* Slogan */}
         <p className="mt-4 text-lg sm:text-2xl text-gray-300 font-medium italic">
-          "Corra sob as luzes da cidade."
+          "Superando limites sob as luzes da cidade."
         </p>
         
         {/* Informações de Data e Local */}
