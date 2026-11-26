@@ -4,7 +4,7 @@ Landing page responsiva e acessível desenvolvida em React + Vite + Tailwind CSS
 
 ## 🚀 Deploy
 
-- **Site publicado:** https://vercel.app
+- **Site publicado:** https://lp-evento-isadora.vercel.app
 - **Notas do Lighthouse (site publicado):**
   - **Performance:** 100 | **Accessibility:** 96 | **Best Practices:** 96
 
