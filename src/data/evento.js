@@ -1,7 +1,7 @@
 // Dados gerais do evento
 export const infoEvento = {
   nome: 'Corrida Noturna OC',
-  slogan: 'Corra sob as luzes da cidade.',
+  slogan: 'Superando limites sob as luzes de Osvaldo Cruz.',
   data: '17 de abril de 2027 (sábado)',
   largada: '19h30',
   local: 'Praça da Matriz — Osvaldo Cruz/SP'
