@@ -2,10 +2,14 @@
 
 Landing page responsiva e acessível desenvolvida em React + Vite + Tailwind CSS v4 para a atividade da disciplina PEND (Programação Front-End).
 
-## 📝 Ticket de Saída
+## 🚀 Deploy
 
-### 1. Qual é a diferença entre um componente que recebe props e um que usa useState? Dê um exemplo da sua página para cada um.
-**Resposta:** Um componente que recebe *props* é puramente visual e depende de dados externos enviados pelo componente pai, como o `CartaoAtracao.jsx`, que apenas exibe as informações de cada percurso. Já um componente que usa *useState* possui estado interno que pode mudar com base nas ações do usuário, como o `Inscricao.jsx`, que monitora o texto digitado nos campos do formulário e controla se a mensagem de sucesso deve ser exibida.
+- **Site publicado:** https://vercel.app
+- **Notas do Lighthouse (site publicado):**
+  - **Performance:** 100 | **Accessibility:** 96 | **Best Practices:** 96
 
-### 2. Se amanhã o evento ganhar uma quinta atração, quais arquivos você precisa mudar?
-**Resposta:** Seria necessário alterar **apenas o arquivo `src/data/evento.js`**, adicionando o objeto do novo percurso dentro do array `percursosLista`. Devido ao uso do método `.map()`, a interface da landing page se atualizaria sozinha e renderizaria o novo cartão de forma automática.
+## 📝 Ticket de Saída — Resumo
+
+* **Componentes e Estado:** Componentes com *props* (como `CartaoAtracao.jsx`) são estáticos e exibem dados recebidos do pai, enquanto componentes com *useState* (como `Inscricao.jsx`) gerenciam estados internos e reagem a interações do usuário.
+* **Escalabilidade:** Para adicionar uma quinta atração, basta atualizar o arquivo de dados (`src/data/evento.js`) com o novo item, pois a interface utiliza `.map()` de forma dinâmica.
+* **Deploy na Vercel:** A pasta enviada para produção é a `dist/` (gerada pelo *build* do Vite), o HTTPS habilitado pela Vercel permite o funcionamento de recursos como notificações, e o `git push` dispara o deploy contínuo automaticamente.
